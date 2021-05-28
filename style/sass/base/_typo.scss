@@ -1,15 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,300;1,400&display=swap');
+// change font to soruce sans pro
 
-$font-montserrat: 'Montserrat', sans-serif;
+$font-opensans: 'Open Sans', sans-serif;
 
-@mixin font-montserrat-bold {
-  font-family: $font-montserrat;
+@mixin font-opensans-bold {
+  font-family: $font-opensans;
   font-weight: 700;
 }
 
-@mixin font-montserrat-medium {
-  font-family: $font-montserrat;
+@mixin font-opensans-medium {
+  font-family: $font-opensans;
   font-weight: 500;
+}
+
+@mixin font-opensans-italic {
+  fontfamily: $font-opensans;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin font-opensans-regular {
+  font-family: $font-opensans;
+  font-weight: 400;
 }
 
 $font-roboto: 'Roboto', sans-serif;
@@ -25,40 +37,51 @@ $font-roboto: 'Roboto', sans-serif;
 }
 
 @mixin title($font-size) {
-  @include font-montserrat-bold();
-  color: $color-primary;
+  @include font-opensans-bold();
+  color: #fafafa;
   font-size: $font-size;
-  line-height: 50px;
+  line-height: 25px;
 }
 
 @mixin text($font-size) {
-  @include font-roboto-regular();
+  @include font-opensans-regular();
   font-size: ($font-size);
-  line-height: 23px;
+  line-height: 15px;
   color: $color-black;
 }
 
 h1 {
-  @include title(25px);
-  @include media-query-desktop {
-    @include title(35px);
-  }
+  @include title(20px);
 }
 
 h2 {
-  @include title(20px);
-  @include media-query-desktop {
-    @include title(35px);
-  }
+  @include title(18px);
 }
 
 h3 {
   @include title(16px);
-  @include media-query-desktop {
-    @include title(35px);
-  }
 }
 
 p {
-  @include text(16px);
+  @include text(13px);
+}
+
+.explanation {
+  @extend p;
+  @include font-opensans-italic();
+  color: white;
+}
+
+.read-more {
+  @include font-opensans-bold();
+  font-size: 13px;
+  color: #fafafa;
+  line-height: 1;
+  text-align: center;
+}
+
+.img-feed-title {
+  color: black;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }

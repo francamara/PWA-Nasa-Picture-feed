@@ -1,0 +1,6 @@
+footer {
+  @include flex(center, row);
+  @include media-query-desktop {
+    @include flex(center, column);
+  }
+}

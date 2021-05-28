@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,300;1,400&display=swap");
 *,
 *:before,
 *:after {
@@ -19,6 +19,7 @@ h4,
 h5,
 h6,
 p,
+.explanation,
 blockquote,
 pre,
 a,
@@ -107,87 +108,152 @@ input {
   border-radius: 0;
 }
 
-h1 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  color: #105bd8;
-  font-size: 25px;
-  line-height: 50px;
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+  /* Remove excess padding and border in Firefox 4+ */
 }
-@media screen and (min-width: 1000px) {
-  h1 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    color: #105bd8;
-    font-size: 35px;
-    line-height: 50px;
-  }
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: #fafafa;
+  font-size: 20px;
+  line-height: 25px;
 }
 
 h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  color: #105bd8;
-  font-size: 20px;
-  line-height: 50px;
-}
-@media screen and (min-width: 1000px) {
-  h2 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    color: #105bd8;
-    font-size: 35px;
-    line-height: 50px;
-  }
+  color: #fafafa;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 h3 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  color: #105bd8;
+  color: #fafafa;
   font-size: 16px;
-  line-height: 50px;
-}
-@media screen and (min-width: 1000px) {
-  h3 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    color: #105bd8;
-    font-size: 35px;
-    line-height: 50px;
-  }
+  line-height: 25px;
 }
 
-p {
-  font-family: "Roboto", sans-serif;
+p, .explanation {
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 23px;
+  font-size: 13px;
+  line-height: 15px;
   color: #000000;
+}
+
+.explanation {
+  fontfamily: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  color: white;
+}
+
+.read-more {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: #fafafa;
+  line-height: 1;
+  text-align: center;
+}
+
+.img-feed-title {
+  color: black;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 header {
   background-color: #323a45;
   width: 100%;
-  height: 75px;
-  position: absolute;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: center;
 }
 header .logo {
-  height: 70px;
+  height: 50px;
 }
 header .logo img {
   height: 100%;
 }
 
+.img-feed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+@media screen and (min-width: 1000px) {
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.read-more {
+  background-color: #02bfe7;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.7rem 1.5rem;
+}
+
 .card {
-  height: 200px;
+  width: 95%;
+  border-radius: 4px;
+  background-color: #0b3d91;
+  padding: 5px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
 .card img {
-  height: 100%;
+  width: 100%;
+  display: block;
+}
+.card .explanation {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 /*# sourceMappingURL=main.css.map */
